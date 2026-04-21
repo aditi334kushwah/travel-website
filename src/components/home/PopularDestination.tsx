@@ -1,0 +1,49 @@
+import React from "react";
+import { Link, SlidersHorizontal } from "lucide-react";
+import DestinationCard from "./DestinationCard";
+import { packages } from "@/data/packages";
+
+const PopularDestination = () => {
+  return (
+    <div>
+      {/* HEADER SAME */}
+      <div className='flex flex-col justify-center align-center mt-20'>
+        <div className='flex justify-center align-center mb-5'>
+          <span className='bg-transparent text-black backdrop-blur-2xl rounded-full border text-sm border-gray-200 p-3'>
+            Pure Adventure
+          </span>
+          <div className="bg-white/20 backdrop-blur-md p-3 w-fit border border-gray-200 rounded-full">
+            <SlidersHorizontal className="text-black w-5 h-5" />
+          </div>
+        </div>
+
+        <h2 className="text-3xl font-bold text-center mb-2">
+          Popular Destinations
+        </h2>
+
+        <div className="mb-5 px-40 text-center">
+          <span>
+            At TriNova, we specialize in creating personalized travel experiences across India.
+          </span>
+        </div>
+      </div>
+
+      {/* GRID */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-20 mb-10">
+        {packages.map((item) => (
+          <DestinationCard key={item.id} item={item} />
+        ))}
+      </div>
+
+      <div className='flex justify-center'>
+        <Link href="/destinations">
+          <button className="bg-[#ee8d33] text-white rounded-2xl py-4 px-6 text-2xl">
+            Explore All Destinations
+          </button>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default PopularDestination;
