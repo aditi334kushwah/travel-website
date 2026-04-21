@@ -54,7 +54,7 @@ export default function HowItWorks() {
         </div>
 
         {/* RIGHT SIDE - Card */}
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center  mt-4 sm:mt-10">
           <div className="w-[300px] h-[450px] bg-white rounded-3xl shadow-xl p-4 flex flex-col justify-end">
 
             <Image src="/images/hero_card1.jpg" alt="Booking Image" width={300} height={150} className="rounded-t-3xl object-cover mb-4" />

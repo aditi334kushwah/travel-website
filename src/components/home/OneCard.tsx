@@ -1,52 +1,49 @@
 import React from 'react'
 import Image from 'next/image'
 
+const quotes = [
+  `"Travel is not just about seeing new places, it's about discovering a new version of yourself."`,
+  `"Collect moments, not things — the world is too beautiful to stay in one place."`,
+  `"The journey you take today becomes the story you tell tomorrow."`,
+]
+
 const OneCard = () => {
   return (
-    <div className='flex justify-center align-center relative w-full h-screen mt-20 '>
-      <Image src="/images/onecard.png"
+    <div className="relative w-full min-h-[500px] h-auto mt-20 flex justify-center items-center">
+
+      {/* Background Image */}
+      <Image
+        src="/images/onecard.png"
         alt="image"
-        width={1200}
-        height={400}
-        className="rounded-xl object-cover mb-20" />
+        fill
+        className="object-cover rounded-xl"
+      />
 
-         {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50 rounded-xl" />
 
-      {/* CONTENT ON TOP */}
-      <div className="absolute  flex flex-col align-start justify-center text-white px-15 py-10 ">
+      {/* Content */}
+      <div className="relative z-10 flex flex-col text-white px-6 sm:px-10 md:px-16 py-12 w-full max-w-6xl">
 
         {/* Heading */}
-        <h1 className="text-4xl  text-start  mb-5 ">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-start mb-4 leading-snug">
           Explore the World with Unforgettable Experiences
         </h1>
 
-        <h4 className="text-xl text-start ">
+        <h4 className="text-sm sm:text-base md:text-xl text-start text-white/80 max-w-2xl">
           Discover handpicked destinations, curated travel packages, and seamless journeys across India.
         </h4>
 
-        {/* Cards */}
-        <div className="mt-10 flex gap-6 ">
-
-          {/* Card 1 */}
-          <div className="bg-white/20 backdrop-blur-md p-6 rounded-xl w-40 text-center">
-            <h2 className="font-semibold">“Travel is not just about seeing new places, it’s about discovering a new version of yourself.”</h2>
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-white/20 backdrop-blur-md p-6 rounded-xl w-40 text-center">
-            <h2 className="font-semibold">“Collect moments, not things — the world is too beautiful to stay in one place.”</h2>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-white/20 backdrop-blur-md p-6 rounded-xl w-40 text-center">
-            <h2 className="font-semibold">“The journey you take today becomes the story you tell tomorrow.”</h2>
-          </div>
-
+        {/* Quote Cards */}
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {quotes.map((quote, i) => (
+            <div key={i} className="bg-white/20 backdrop-blur-md p-5 rounded-xl text-center text-sm sm:text-base">
+              <h2 className="font-semibold leading-relaxed">{quote}</h2>
+            </div>
+          ))}
         </div>
 
       </div>
-    
     </div>
   )
 }

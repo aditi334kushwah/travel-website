@@ -1,4 +1,3 @@
-// components/experience/WhatYouGet.tsx
 import { Globe, Utensils, Map, Hotel } from "lucide-react";
 
 const data = [
@@ -10,18 +9,18 @@ const data = [
 
 export default function WhatYouGet() {
   return (
-    <section className="py-16 bg-[#111827] text-white"> 
-      <h2 className="text-3xl text-center font-bold mb-10">
-        What You’ll Experience
+    <section className="py-12 sm:py-16 bg-[#111827] text-white px-4">
+      <h2 className="text-2xl sm:text-3xl text-center font-bold mb-8 sm:mb-10">
+        What You'll Experience
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-10">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-3xl mx-auto">
         {data.map((item, i) => {
           const Icon = item.icon;
           return (
             <div key={i} className="text-center">
-              <Icon className="w-10 h-10 mx-auto text-yellow-400" />
-              <p className="mt-3">{item.text}</p>
+              <Icon className="w-8 h-8 sm:w-10 sm:h-10 mx-auto text-yellow-400" />
+              <p className="mt-3 text-sm sm:text-base">{item.text}</p>
             </div>
           );
         })}

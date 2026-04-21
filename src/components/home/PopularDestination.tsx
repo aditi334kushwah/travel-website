@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, SlidersHorizontal } from "lucide-react";
+import { SlidersHorizontal } from "lucide-react";
 import DestinationCard from "./DestinationCard";
 import { packages } from "@/data/packages";
 
@@ -7,7 +7,7 @@ const PopularDestination = () => {
   return (
     <div>
       {/* HEADER SAME */}
-      <div className='flex flex-col justify-center align-center mt-20'>
+      <div className='flex flex-col justify-center align-center mt-25'>
         <div className='flex justify-center align-center mb-5'>
           <span className='bg-transparent text-black backdrop-blur-2xl rounded-full border text-sm border-gray-200 p-3'>
             Pure Adventure
@@ -21,7 +21,7 @@ const PopularDestination = () => {
           Popular Destinations
         </h2>
 
-        <div className="mb-5 px-40 text-center">
+        <div className="mb-5  text-center">
           <span>
             At TriNova, we specialize in creating personalized travel experiences across India.
           </span>
@@ -35,13 +35,7 @@ const PopularDestination = () => {
         ))}
       </div>
 
-      <div className='flex justify-center'>
-        <Link href="/destinations">
-          <button className="bg-[#ee8d33] text-white rounded-2xl py-4 px-6 text-2xl">
-            Explore All Destinations
-          </button>
-        </Link>
-      </div>
+      
     </div>
   );
 };
