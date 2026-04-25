@@ -5,7 +5,7 @@ import { packages } from "@/data/packages";
 
 const PopularDestination = () => {
   return (
-    <div>
+    <>
       {/* HEADER SAME */}
       <div className='flex flex-col justify-center align-center mt-25'>
         <div className='flex justify-center align-center mb-5'>
@@ -36,7 +36,7 @@ const PopularDestination = () => {
       </div>
 
       
-    </div>
+    </>
   );
 };
 

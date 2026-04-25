@@ -3,8 +3,8 @@
 import Image from "next/image";
 import { Link, MapPin } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { button } from "motion/react-m";
-// import Link from 'next/dist/client/link'
+// import { button } from "motion/react-m";
+// // import Link from 'next/dist/client/link'
 
 // ✅ TYPE DEFINE
 type Packages = {
@@ -50,19 +50,22 @@ const DestinationCard: React.FC<Props> = ({ item }) => {
       </div>
 
       <div className="flex justify-between p-5">
-        <button
+        
+         <button
+          type="button"
           onClick={() => router.push(`/packages/${item.id}`)}
-          className="bg-[#c8782f] text-white rounded-full border py-2 border-white/35 backdrop-blur px-3 transition duration-300 hover:-translate-y-1 hover:bg-gray/12"
+          className="flex-1 rounded-full bg-[#c8782f] px-4 py-2 text-white transition duration-300 hover:-translate-y-1 hover:opacity-90"
         >
           Detail View
         </button>
 
-          <button
-            onClick={() => router.push("/booking")}
-            className="bg-[#74706d] text-white rounded-full border py-2 border-white/35 backdrop-blur px-3 transition duration-300 hover:-translate-y-1 hover:bg-gray/12"
-          >
-            Book Now
-          </button>
+        <button
+          type="button"
+          onClick={() => router.push("/booking")}
+          className="flex-1 rounded-full bg-[#74706d] px-4 py-2 text-white transition duration-300 hover:-translate-y-1 hover:opacity-90"
+        >
+          Book Now
+        </button>
        
       </div>
     </div>

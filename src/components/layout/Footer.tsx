@@ -50,8 +50,8 @@ const footerBlocks = [
         },
         {
             id: 2,
-            text: "Experience",
-            link: "/experience"
+            text: "Experiences",
+            link: "/experiences"
         },
         {
             id: 3,
